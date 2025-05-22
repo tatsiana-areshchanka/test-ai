@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <div>
+            <input type="text" id="category" placeholder="Category">
+            <input type="number" id="amount" placeholder="Amount ($)">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <table id="expenseTable">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount ($)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expenseList">
+            </tbody>
+        </table>
+
+        <button onclick="calculateExpenses()">Calculate</button>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Results</h2>
+            <p>Total Expenses: $<span id="totalExpenses">0</span></p>
+            <p>Average Daily Expense: $<span id="averageDaily">0</span></p>
+            <h3>Top 3 Largest Expenses:</h3>
+            <ul id="topExpenses"></ul>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
